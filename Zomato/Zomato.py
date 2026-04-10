@@ -51,7 +51,7 @@ for item in menu:
                 "item_name": nesteditem.get('name'),
                 "item_slugs": nesteditem.get('tag_slugs'),
                 "item_url": '',
-                "item_description": nesteditem.get('desc'),
+                "item_description": nesteditem.get('desc'),     
                 "item_price": '',
                 "is_veg": True if nesteditem.get('dietary_slugs')[0] == True else False
             }
@@ -78,3 +78,5 @@ output={
 }
 with open("output.json", "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2,ensure_ascii=False)
+
+
